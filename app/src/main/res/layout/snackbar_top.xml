@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/snackbar_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:layout_alignParentTop="true"
+    app:theme="@style/AppTheme">
+
+    <LinearLayout
+        android:id="@+id/snackbar_top_layout"
+        android:paddingTop="5dp"
+        android:orientation="vertical"
+        android:minHeight="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="@color/color_secondary">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/snackbar_top_text"
+            android:paddingStart="8dp"
+            android:paddingBottom="8dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:text="dfsdgsdfsdf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/snackbar_top_indicator"
+            android:background="@color/color_primary"
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

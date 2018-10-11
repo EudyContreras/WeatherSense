@@ -1,0 +1,121 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/weather_details_layout"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Date:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/weather_details_date"
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="N/A"
+                android:textColor="@color/pale"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:gravity="bottom"
+            android:paddingLeft="4dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Last Update:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:gravity="right"
+                android:id="@+id/weather_details_last_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="N/A"
+                android:textColor="@color/pale"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="4dp"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingTop="4dp"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:id="@+id/weather_details_description"
+            android:text="No data to display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout ="@layout/details_compilation_v1"
+                android:id="@id/details_compilation_v1"/>
+            <include layout ="@layout/details_compilation_v2"
+                android:id="@id/details_compilation_v2"/>
+
+        </FrameLayout>
+
+        <include layout="@layout/segment_separator_h"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/details_container"
+        android:clickable="true"
+        android:background="@color/transparent"/>
+
+
+
+    <FrameLayout
+        android:clickable="true"
+        android:id="@+id/weather_details_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <!--Day, Wind direction, Wind speed, Preassure, Wind chill, Feels like, Humidity, Visibility-->
+

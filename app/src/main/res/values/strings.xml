@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Weather Sense</string>
+    <string name="temperature">N/A</string>
+    <string name="condition">Condition</string>
+    <string name="location">Location</string>
+    <string name="condition_icon">Condition Icon</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="temperature_output">%1$d&#176;%2$s</string>
+    <string name="save_changes">Save</string>
+    <string name="settings">Settings</string>
+    <string name="cache_exception_get">No Cached Weather Data</string>
+    <string name="cache_exception_save">Cache data save failure</string>
+    <string name="cannot_reverse">"Could not reverse geocode"</string>
+    <string name="no_weather_found">No weather information found for </string>
+    <string name="no_geo_location">Google GeoLocation service could not retrieve your location</string>
+    <string name="powered_by_weather_underground">Powered by Weather Underground</string>
+
+    <string name="WEATHER_UNDERGROUND_API_KEY" templateMergeStrategy="preserve" translatable="false">f3b257464a23623e</string>
+    <!--<string name="WEATHER_UNDERGROUND_API_KEY" templateMergeStrategy="preserve" translatable="false">aa0ab0a14dbcc0d8</string>-->
+    <string name="Google_Places_Key" templateMergeStrategy="preserve" translatable="false">AIzaSyD80Xi1DE6frO3u6GmDKj6BogedGWDhktA</string>
+    <string name="Google_GeoCoding_Key" templateMergeStrategy="preserve" translatable="false">AIzaSyD80Xi1DE6frO3u6GmDKj6BogedGWDhktA</string>
+    <string name="pref_clear_weather_cache">\"clear_weather_cache</string>
+    <string name="clear_cache_confirmation">Are you sure you wished to delete the cached weather data?</string>
+    <string name="clear_cache_confirmation_title">Clear Cache</string>
+    <string name="pref_first_run">first_run_ever</string>
+    <string name="retry_getting_location">\"Would you like to grant the permissions needed in order to weather sense to sense your location?\"</string>
+    <string name="needs_location_permissions">\"The permissions required for this application to function were not granted during setup.Please visit your security settings in order to grant Location access to this application\"</string>
+    <string name="pref_temp_celsius_checked">temp_celsius_checked</string>
+    <string name="pref_temp_fahrenheit_checked">temp_fahrenheit_checked</string>
+
+</resources>

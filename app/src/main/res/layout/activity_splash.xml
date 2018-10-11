@@ -1,0 +1,34 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    tools:context=".splash.SplashActivity">
+
+    <ImageView
+        android:id="@+id/splash_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/splash_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:src="@drawable/sunny_icon"
+        android:gravity="center"
+        android:keepScreenOn="true"/>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="6dp"
+        android:background="@color/color_primary_darker"
+        android:contentDescription="@string/powered_by_weather_underground"
+        android:elevation="1dp"
+        android:padding="5dp"
+        android:src="@drawable/weather_underground_log" />
+
+</FrameLayout>

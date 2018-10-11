@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#ff4081</color>
+
+    <!--<color name="color_primary">#2196f3</color>-->
+    <!--<color name="color_primary_light">#65bbff</color>-->
+    <!--<color name="color_primary_lighter">#71befb</color>-->
+    <!--<color name="color_primary_dark">#2196f3</color>-->
+    <!--<color name="color_primary_darker">#1167fa</color>-->
+    <!--<color name="color_primary_very_dark">#0554da</color>-->
+    <color name="color_primary">#1e2024</color>
+    <color name="color_primary_light">#26282c</color>
+    <color name="color_primary_dark">#111416</color>
+    <color name="color_primary_darker">#0f1215</color>
+    <color name="color_primary_lighter">#2e3032</color>
+    <color name="color_primary_very_dark">#06080a</color>
+    <color name="color_primary_very_light">#42464a</color>
+    <color name="color_primary_accent">#ff4081</color>
+    <color name="color_primary_highlight">#ffffff</color>
+    <color name="color_secondary">#2e3237</color>
+    <color name="color_secondary_light">#363b41</color>
+    <color name="color_secondary_dark">#2c2f33</color>
+    <color name="color_secondary_darker">#292b2d</color>
+    <color name="color_secondary_very_light">#454b52</color>
+    <color name="color_secondary_very_dark">#212426</color>
+    <color name="color_secondary_accent">#ff4081</color>
+    <color name="color_secondary_accent_light">#ff5b93</color>
+    <color name="color_secondary_accent_dark">#ff2670</color>
+    <color name="color_secondary_highlight">#fe5890</color>
+
+    <color name="cyan_light">#3b96de</color>
+    <color name="cyan">#006fb9</color>
+
+    <!--Categories colors-->
+    <color name="orange">#ff8e0c</color>
+    <color name="blue">#00acc1</color>
+    <color name="pink">#c31879</color>
+    <color name="emerald">#4db6ac</color>
+    <color name="yellow">#f9a825</color>
+    <color name="purple">#c628b6</color>
+    <color name="green">#00c063</color>
+    <color name="red">#b71c1c</color>
+
+    <color name="orange_light">#eba64c</color>
+    <color name="blue_light">#49cbe6</color>
+    <color name="pink_light">#d53d93</color>
+    <color name="emerald_light">#3cc0a2</color>
+    <color name="yellow_light">#efc655</color>
+    <color name="purple_light">#ed53de</color>
+    <color name="red_light">#f53f3f</color>
+
+    <color name="orange_dark">#a05b00</color>
+    <color name="blue_dark">#06687c</color>
+    <color name="pink_dark">#960055</color>
+    <color name="emerald_dark">#1a997d</color>
+    <color name="yellow_dark">#9c750a</color>
+    <color name="purple_dark">#8d057f</color>
+    <color name="red_dark">#9b0404</color>
+
+    <color name="gold">#ffc800</color>
+    <color name="white">#ffffff</color>
+    <color name="pale">#aaa</color>
+    <color name="black">#000000</color>
+    <color name="gray">#4d4d4d</color>
+    <color name="silver">#41454a</color>
+    <color name="light_gray">#6a6a6a</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>

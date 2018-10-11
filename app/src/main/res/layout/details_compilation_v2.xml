@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:visibility="visible"
+    android:id="@+id/details_compilation_v2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <include layout="@layout/details_sect_1" />
+    <include layout="@layout/details_sect_2" />
+    <include layout="@layout/details_sect_3" />
+    <include layout="@layout/details_sect_4" />
+
+</LinearLayout>

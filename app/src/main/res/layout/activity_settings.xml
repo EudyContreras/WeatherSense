@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eudycontreras.weathersense.settings.SettingsActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_settings"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/settings_toolbar"
+            layout="@layout/toolbar_home" />
+
+        <ScrollView
+            android:id="@+id/setting_activity_scroller"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/settings_toolbar"
+            android:overScrollMode="always"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/geo_location_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6dp"
+                            android:layout_weight="1"
+                            android:text="@string/pref_title_enable_geolocation"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/pref_description_enable_geolocation"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/geolocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:enabled="true" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/manual_location_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/geo_location_setting"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:layout_weight="1"
+                        android:text="@string/pref_title_manual_location"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <com.eudycontreras.weathersense.customView.CustomAutoCompleteTextView
+                        android:id="@+id/manual_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_primary_light"
+                        android:inputType="textPostalAddress"
+                        android:maxLines="1"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="8dp"
+                        android:paddingTop="5dp"
+                        android:popupBackground="@drawable/bg_dropdown"
+                        android:popupTheme="@style/AppTheme.HomeDark"
+                        android:textCursorDrawable="@drawable/cursor_white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/temperature_unit_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/manual_location_setting"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/pref_title_temperature_unit"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/temperature_unit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/color_primary_light"
+                        android:entries="@array/pref_temperature_unit_titles"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="5dp"
+                        android:popupBackground="@color/color_primary_light"
+                        android:popupTheme="@style/AppTheme.HomeDark"
+                        android:textAlignment="textEnd"
+                        android:theme="@style/AppTheme.Home" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/comparisons_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/temperature_unit_setting"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6dp"
+                            android:layout_weight="1"
+                            android:text="Show Comparisons"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Gives side by side comparisons of API results and Sensor Results"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/show_comparison"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:popupTheme="@style/AppTheme.Switch"
+                        android:thumbTint="@color/white" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/settings_report_frequency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/comparisons_setting"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6dp"
+                            android:layout_weight="1"
+                            android:text="Sensor Report Frequency"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="The sensor information poll happens at every 150 milliseconds. Choose and option below to change this setting"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-8dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/settings_report_frequency_50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="10ms"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/settings_report_frequency_100"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="100ms"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/settings_report_frequency_150"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="150ms"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/settings_report_frequency_250"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="250ms"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/background_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/settings_report_frequency"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6dp"
+                            android:layout_weight="1"
+                            android:text="@string/pref_title_background_updates"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/pref_description_enable_updates"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/autoUpdates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:enabled="true"
+                        android:popupTheme="@style/AppTheme.Switch" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/update_Intervals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/background_update"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/pref_title_update_interval"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/time_intervals"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_primary_light"
+                        android:entries="@array/pref_update_time_intervals"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="5dp"
+                        android:popupBackground="@color/color_primary_light"
+                        android:popupTheme="@style/AppTheme.HomeDark"
+                        android:textAlignment="textEnd"
+                        android:theme="@style/AppTheme.Home" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Request_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/update_Intervals"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="1"
+                            android:text="Use Volley"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Activates the volley HTTP Connection service for making weather update requests."
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/use_volley"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:enabled="true"
+                        android:popupTheme="@style/AppTheme.Switch" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/setting_clear_cache"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Request_method"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="10dp"
+                    android:text="Delete Cached Weather Data"
+                    android:theme="@style/Theme.Buttons" />
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="6dp"
+            android:background="@color/color_primary_darker"
+            android:contentDescription="@string/powered_by_weather_underground"
+            android:elevation="1dp"
+            android:padding="5dp"
+            android:src="@drawable/weather_underground_log" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/blurred_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/setting_dim_overlay"
+        android:background="@drawable/bg_dimmed_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/snackbar_bottom" />
+</FrameLayout>

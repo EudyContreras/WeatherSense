@@ -1,0 +1,93 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_weather"
+    android:id="@+id/weather_layout"
+    android:orientation="vertical"
+    tools:context=".weather.WeatherActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/refresh_area"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/weather_refresh_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:alpha="0.8"
+            android:indeterminate="true" />
+
+        <TextView
+            android:textSize="10sp"
+            android:text="Refreshing"
+            android:layout_alignBottom="@id/weather_refresh_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:translationZ="0.5dp"
+            android:backgroundTint="@color/color_primary"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/home_toolbar"
+                layout="@layout/toolbar_home" />
+
+        </LinearLayout>
+
+    <com.eudycontreras.weathersense.customView.VerticalOverScrollView
+        android:scrollbars="none"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="100dp"
+        android:id="@+id/weather_activity_scroller"
+        android:overScrollMode="always"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/fragment_weather"/>
+            <include layout="@layout/segment_separator_h"/>
+            <include layout="@layout/fragment_details"/>
+            <include layout="@layout/fragment_forecast_hourly"/>
+            <include layout="@layout/segment_separator_h"/>
+            <include layout="@layout/fragment_forecast_daily"/>
+
+        </LinearLayout>
+
+    </com.eudycontreras.weathersense.customView.VerticalOverScrollView>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/blurred_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/dim_overlay"
+        android:background="@drawable/bg_dimmed_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <include layout="@layout/snackbar_bottom"/>
+</FrameLayout>

@@ -1,0 +1,11 @@
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:weather_app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_action_settings"
+        android:id="@+id/settings"
+        android:title="@string/settings"
+        weather_app:showAsAction="always"/>
+
+</menu>
